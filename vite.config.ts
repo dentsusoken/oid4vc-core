@@ -7,6 +7,7 @@ export default defineConfig({
       entry: {
         main: './lib/index.ts',
         utils: './lib/utils/index.ts',
+        dynamodb: './lib/dynamodb/index.ts',
       },
       name: 'oid4vc-core',
       fileName: (format, entry) => {
@@ -16,6 +17,9 @@ export default defineConfig({
         return entry === 'main' ? indexFile : `${entry}/${indexFile}`;
         //return `${dir}/index.${ext}`;
       },
+    },
+    rollupOptions: {
+      external: ['@aws-sdk/lib-dynamodb'],
     },
   },
   plugins: [
