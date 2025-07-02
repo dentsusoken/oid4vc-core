@@ -15,4 +15,5 @@
  * License.
  */
 
+export * from './dynamodb';
 export * from './utils';

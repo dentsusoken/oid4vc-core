@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { Result, runCatching, runAsyncCatching } from './result';
+import { Result, runCatching, runAsyncCatching } from '../result';
 
 describe('Result', () => {
   describe('success', () => {

@@ -5,7 +5,7 @@ import {
   DeleteCommand,
 } from '@aws-sdk/lib-dynamodb';
 import { mockClient } from 'aws-sdk-client-mock';
-import { DynamoDB } from './DynamoDB';
+import { DynamoDB } from '../DynamoDB';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 
 describe('DynamoDB', () => {
