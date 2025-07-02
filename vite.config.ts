@@ -12,7 +12,7 @@ export default defineConfig({
       },
       name: 'oid4vc-core',
       fileName: (format, entry) => {
-        const ext = format === 'es' ? 'js' : format;
+        const ext = format === 'es' ? 'mjs' : format;
         const indexFile = `index.${ext}`;
 
         return entry === 'main' ? indexFile : `${entry}/${indexFile}`;
