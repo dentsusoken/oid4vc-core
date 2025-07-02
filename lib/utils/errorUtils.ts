@@ -67,10 +67,3 @@ export const convertToError = (e: unknown): Error => {
 
   return new Error(getErrorMessage(e));
 };
-
-export const responseToError = (response: Response): Error => {
-  const { status, statusText } = response;
-  const message = `Invalid response with status ${status} ${statusText}`;
-
-  return new Error(message);
-};

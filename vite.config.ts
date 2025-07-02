@@ -7,6 +7,7 @@ export default defineConfig({
       entry: {
         main: './lib/index.ts',
         utils: './lib/utils/index.ts',
+        crypto: './lib/crypto/index.ts',
       },
       name: 'oid4vc-core',
       fileName: (format, entry) => {
