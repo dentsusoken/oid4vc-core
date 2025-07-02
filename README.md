@@ -143,10 +143,6 @@ The library uses Vitest for testing. Test files are located in `__tests__` direc
 npm test
 ```
 
-## License
-
-MIT License - see [LICENSE](LICENSE) file for details.
-
 ## Contributing
 
 1. Fork the repository
