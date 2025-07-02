@@ -6,6 +6,10 @@
     "type": "git",
     "url": "https://github.com/dentsusoken/oid4vc-core"
   },
+  "homepage": "https://github.com/dentsusoken/oid4vc-core#readme",
+  "bugs": {
+    "url": "https://github.com/dentsusoken/oid4vc-core/issues"
+  },
   "files": [
     "dist"
   ],

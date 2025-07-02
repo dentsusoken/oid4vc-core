@@ -21,7 +21,11 @@ export default defineConfig({
     rollupOptions: {
       external: ['@aws-sdk/lib-dynamodb'],
       output: {
-        manualChunks: undefined,
+        manualChunks: (id) => {
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
+        },
       },
     },
   },
