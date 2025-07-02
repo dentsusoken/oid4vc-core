@@ -20,6 +20,11 @@
       "types": "./dist/crypto/index.d.ts",
       "import": "./dist/crypto/index.js",
       "require": "./dist/crypto/index.cjs"
+    },
+    "./dynamodb": {
+      "types": "./dist/dynamodb/index.d.ts",
+      "import": "./dist/dynamodb/index.js",
+      "require": "./dist/dynamodb/index.cjs"
     }
   },
   "scripts": {
@@ -27,13 +32,18 @@
     "test": "vitest --run"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241216.0",
     "@types/node": "^20.12.7",
     "@typescript-eslint/eslint-plugin": "^7.5.0",
     "@typescript-eslint/parser": "^7.5.0",
+    "aws-sdk-client-mock": "^4.1.0",
     "eslint": "^8.57.0",
     "typescript": "^5.3.3",
-    "vite": "^5.0.10",
+    "vite": "^6.3.5",
     "vite-plugin-node-polyfills": "^0.2.0",
-    "vitest": "^1.4.0"
+    "vitest": "^3.1.4"
+  },
+  "dependencies": {
+    "@aws-sdk/lib-dynamodb": "^3.713.0"
   }
 }
