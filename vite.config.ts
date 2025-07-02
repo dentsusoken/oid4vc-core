@@ -16,11 +16,13 @@ export default defineConfig({
         const indexFile = `index.${ext}`;
 
         return entry === 'main' ? indexFile : `${entry}/${indexFile}`;
-        //return `${dir}/index.${ext}`;
       },
     },
     rollupOptions: {
       external: ['@aws-sdk/lib-dynamodb'],
+      output: {
+        manualChunks: undefined,
+      },
     },
   },
   plugins: [
@@ -36,6 +38,7 @@ export default defineConfig({
     }),
     dts({
       rollupTypes: false,
+      exclude: ['**/__tests__/**', '**/*.spec.ts', '**/*.test.ts'],
     }),
   ],
 });
