@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import { nodePolyfills } from 'vite-plugin-node-polyfills';
+import dts from 'vite-plugin-dts';
 
 export default defineConfig({
   build: {
@@ -7,7 +8,6 @@ export default defineConfig({
       entry: {
         main: './lib/index.ts',
         utils: './lib/utils/index.ts',
-        crypto: './lib/crypto/index.ts',
         dynamodb: './lib/dynamodb/index.ts',
       },
       name: 'oid4vc-core',
@@ -33,6 +33,9 @@ export default defineConfig({
       overrides: {
         fs: 'memfs',
       },
+    }),
+    dts({
+      rollupTypes: false,
     }),
   ],
 });
